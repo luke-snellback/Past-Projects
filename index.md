@@ -17,7 +17,7 @@ Each report demonstrates different facets of applied analytics—from behavioral
 - Statistical modeling & predictive analytics (R, Python)
 - Data visualization & dashboarding
 - Hypothesis testing & regression analysis
-- SQL, Excel, RStudio, scikit-learn, pandas, SPSS
+- SQL, Excel, RStudio, SPSS, Python, scikit-learn, pandas, and NumPy
 
 ## 📫 Contact
 Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/luke-snellback-54300b238/) or reach out via email at snellbackl@gmail.com.
