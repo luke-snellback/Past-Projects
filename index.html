@@ -2,77 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luke Snellback – Analytics Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
-      background-color: #D3D3D3; /* Light grey */
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #D3D3D3;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #2E8B57; /* Sea green */
+      background-color: #2E8B57;
       color: white;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     nav {
-      background: #2E8B57;
-      padding: 10px 20px;
-      border-bottom: 2px solid #236c45;
+      background-color: #2E8B57;
       display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+      justify-content: center;
+      padding: 10px 0;
+      position: relative;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav li {
+      position: relative;
     }
     nav a {
-      text-decoration: none;
       color: white;
-      font-weight: bold;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      display: block;
+      transition: background 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #236c45;
+      border-radius: 4px;
     }
-    h1, h2 {
-      margin-top: 30px;
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #2E8B57;
+      padding: 10px 0;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li a {
+      padding: 10px 15px;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
       color: #2E8B57;
+      margin-top: 40px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin-top: 20px;
     }
     table, th, td {
       border: 1px solid #aaa;
     }
     th, td {
-      padding: 10px;
+      padding: 12px;
       text-align: left;
     }
     th {
       background: #f0f0f0;
-      color: #333;
     }
     td a {
-      color: #2E8B57; /* Links match nav color */
-      font-weight: bold;
+      color: #2E8B57;
+      font-weight: 600;
+      text-decoration: none;
     }
     td a:hover {
       text-decoration: underline;
     }
-    ul li {
-      margin-bottom: 8px;
-    }
     footer {
-      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
       font-size: 0.9em;
       color: #555;
-      text-align: center;
+      margin-top: 60px;
     }
-    /* Contact links */
     .contact a {
       color: #2E8B57;
-      font-weight: bold;
+      font-weight: 600;
       text-decoration: none;
     }
     .contact a:hover {
@@ -88,21 +127,28 @@
 </header>
 
 <nav>
-  <a href="./">Home</a>
-  <a href="Feeling%20Guilty%20about%20Social%20Media%20Usage/">Social Media</a>
-  <a href="The%20Influence%20of%20Gender%20on%20Perceived%20Trustworthiness%20of%20Political%20Figures/">Politics</a>
-  <a href="Heart%20Disease%20Predictive%20Models/">Heart Disease</a>
-  <a href="The%20Effects%20of%20Socioeconomic%20Factors%20on%20Mental%20Health/">Mental Health</a>
+  <ul>
+    <li><a href="./">Home</a></li>
+    <li>
+      <a href="#">Projects</a>
+      <ul>
+        <li><a href="Feeling%20Guilty%20about%20Social%20Media%20Usage/">Social Media</a></li>
+        <li><a href="The%20Influence%20of%20Gender%20on%20Perceived%20Trustworthiness%20of%20Political%20Figures/">Politics</a></li>
+        <li><a href="Heart%20Disease%20Predictive%20Models/">Heart Disease</a></li>
+        <li><a href="The%20Effects%20of%20Socioeconomic%20Factors%20on%20Mental%20Health/">Mental Health</a></li>
+      </ul>
+    </li>
+    <li><a href="https://www.linkedin.com/in/luke-snellback-54300b238/" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:snellbackl@gmail.com">Contact</a></li>
+  </ul>
 </nav>
 
 <main>
-  <h2>Past Analytics Reports 📊</h2>
+  <h2>Past Analytics Reports 📚</h2>
   <p>
-    Welcome to my public portfolio repository, where I showcase select analytical projects from my studies in Operational and Business Analytics at the University of Oregon.
-    These projects reflect my ability to extract insights, tell stories with data, and translate findings into meaningful business or societal impact.
+    This portfolio highlights my applied analytical work from the University of Oregon. Each project is rooted in real-world data and showcases my skills in statistical analysis, modeling, and business insight.
   </p>
 
-  <h2>📚 Project List</h2>
   <table>
     <tr>
       <th>Report</th>
@@ -110,34 +156,33 @@
     </tr>
     <tr>
       <td><a href="Feeling%20Guilty%20about%20Social%20Media%20Usage/">Feeling Guilty about Social Media Usage</a></td>
-      <td>Behavioral analysis of guilt and social media usage frequency.</td>
+      <td>Behavioral analysis of guilt and social media usage frequency among students.</td>
     </tr>
     <tr>
       <td><a href="Heart%20Disease%20Predictive%20Models/">Heart Disease Predictive Models</a></td>
-      <td>Machine learning models for predicting heart disease risk.</td>
+      <td>Machine learning models for predicting heart disease based on risk factors.</td>
     </tr>
     <tr>
-      <td><a href="The%20Effects%20of%20Socioeconomic%20Factors%20on%20Mental%20Health/">Effects of Socioeconomic Factors on Mental Health</a></td>
-      <td>Regression-based study of income, education, and mental health.</td>
+      <td><a href="The%20Effects%20of%20Socioeconomic%20Factors%20on%20Mental%20Health/">Socioeconomic Factors & Mental Health</a></td>
+      <td>Regression study exploring how socioeconomic indicators affect mental health.</td>
     </tr>
     <tr>
-      <td><a href="The%20Influence%20of%20Gender%20on%20Perceived%20Trustworthiness%20of%20Political%20Figures/">Gender and Perceived Trustworthiness of Political Figures</a></td>
-      <td>A look at how gender biases influence political perception.</td>
+      <td><a href="The%20Influence%20of%20Gender%20on%20Perceived%20Trustworthiness%20of%20Political%20Figures/">Gender & Trust in Politics</a></td>
+      <td>Study on gender bias in perceived trustworthiness of political figures.</td>
     </tr>
   </table>
 
-  <h2>🛠️ Skills & Tools Demonstrated</h2>
+  <h2>🛠️ Skills & Tools</h2>
   <ul>
-    <li>Statistical modeling & predictive analytics (R, Python)</li>
-    <li>Data visualization & dashboarding</li>
-    <li>Hypothesis testing & regression analysis</li>
-    <li>SQL, Excel, RStudio, SPSS, Python, scikit-learn, pandas, NumPy</li>
+    <li>Statistical modeling (R, Python)</li>
+    <li>Data visualization (Excel, Tableau, RStudio)</li>
+    <li>Machine learning & predictive analytics</li>
+    <li>SQL, SPSS, scikit-learn, pandas, NumPy</li>
   </ul>
 
-  <h2>📫 Contact</h2>
+  <h2>📫 Get in Touch</h2>
   <p class="contact">
-    Connect with me on <a href="https://www.linkedin.com/in/luke-snellback-54300b238/" target="_blank">LinkedIn</a> or email me at
-    <a href="mailto:snellbackl@gmail.com">snellbackl@gmail.com</a>.
+    <a href="mailto:snellbackl@gmail.com">snellbackl@gmail.com</a> • <a href="https://www.linkedin.com/in/luke-snellback-54300b238/" target="_blank">LinkedIn</a>
   </p>
 </main>
 
