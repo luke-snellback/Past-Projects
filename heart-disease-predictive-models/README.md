@@ -1,18 +1,17 @@
-# The Influence of Gender on Perceived Trustworthiness of Political Figures
+# Heart Disease Predictive Models
 
-This report analyzes how gender and political ideology affect perceived trustworthiness of Donald Trump and Hillary Clinton. Using statistical tests and index-based visualizations, the report reveals deep divisions in public opinion across gender and ideological lines.
+This project evaluates three machine learning models to predict heart disease risk using a dataset of over 319,000 respondents. The goal is to identify key health factors and demographic traits linked to increased risk and compare the performance of classification models.
 
 ## Key Highlights
-- Female respondents rated Hillary Clinton significantly more trustworthy than males.
-- Males viewed Donald Trump more favorably than females did.
-- Conservative women showed unexpectedly high trust in Clinton; liberal men showed greater trust in Trump than expected.
-- Lambda values confirmed statistical significance for Clinton's perception by gender.
+- Models used: Logistic Regression, KNN Classification, and Decision Tree.
+- SMOTE was applied to balance a heavily imbalanced dataset.
+- Logistic Regression had the highest specificity and overall performance.
+- Age, gender (male), prior strokes, and smoking were top predictors.
 
 ## Purpose
-To understand the intersection of gender identity and political alignment in shaping public trust in political figures.
+To help healthcare providers and insurers identify at-risk individuals and implement preventative strategies based on data-driven insights.
 
 ## Tools & Methods
-- Lambda values and significance testing
-- Index graphs
-- Subgroup analysis by gender and ideology
-
+- RStudio for modeling
+- SMOTE for class balance
+- Accuracy, sensitivity, specificity, and kappa score evaluations
