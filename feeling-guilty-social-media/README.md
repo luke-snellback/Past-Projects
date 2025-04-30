@@ -16,3 +16,4 @@ To understand what traits or behaviors contribute to guilt about social media us
 - Stepwise and linear regression
 - Crosstab index analysis
 
+The report can be found here: [Feeling Guilty about Social Media Usage](./Feeling%20Guilty%20about%20Social%20Media%20Usage.pdf)
