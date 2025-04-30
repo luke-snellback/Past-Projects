@@ -25,18 +25,19 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .menu-toggle {
-      display: none;
+      display: flex;
       flex-direction: column;
       justify-content: center;
       cursor: pointer;
-      padding: 10px;
+      padding: 15px;
       position: absolute;
-      top: 10px;
+      top: 15px;
       right: 20px;
+      z-index: 999;
     }
     .menu-toggle span {
-      height: 3px;
-      width: 25px;
+      height: 4px;
+      width: 30px;
       background: white;
       margin: 4px 0;
       border-radius: 2px;
@@ -49,10 +50,9 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      display: flex;
+      background: #2E8B57;
       flex-direction: column;
       display: none;
-      background: #2E8B57;
     }
     nav ul.show {
       display: flex;
@@ -61,7 +61,7 @@
       color: white;
       text-decoration: none;
       font-weight: 600;
-      padding: 12px 20px;
+      padding: 15px 20px;
       display: block;
       transition: background 0.3s;
     }
@@ -73,9 +73,9 @@
         display: none;
       }
       nav ul {
+        display: flex !important;
         flex-direction: row;
         justify-content: center;
-        display: flex;
       }
     }
     h1, h2 {
@@ -188,7 +188,7 @@
     <li>Statistical modeling (R, Python)</li>
     <li>Data visualization (Excel, Tableau, RStudio)</li>
     <li>Machine learning & predictive analytics</li>
-    <li>SQL, SPSS, Excel, RStudio, Python, scikit-learn, pandas, NumPy</li>
+    <li>SQL, SPSS, scikit-learn, pandas, NumPy</li>
   </ul>
 
   <h2>📫 Get in Touch</h2>
