@@ -15,3 +15,6 @@ To help healthcare providers and insurers identify at-risk individuals and imple
 - RStudio for modeling
 - SMOTE for class balance
 - Accuracy, sensitivity, specificity, and kappa score evaluations
+
+
+The report can be found here: [Heart Disease Predictive Models](./Heart%20Disease%20Predictive%20Models.pdf)
