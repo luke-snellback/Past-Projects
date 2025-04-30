@@ -8,19 +8,19 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: #3e3e3e; /* Slate grey */
-      color: #f0f0f0;
+      background-color: #D3D3D3; /* Light grey */
+      color: #333;
     }
     header {
-      background-color: #808000; /* Olive green */
+      background-color: #2E8B57; /* Sea green */
       color: white;
       padding: 20px;
       text-align: center;
     }
     nav {
-      background: #808000;
+      background: #2E8B57;
       padding: 10px 20px;
-      border-bottom: 2px solid #6b6b00;
+      border-bottom: 2px solid #236c45;
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
@@ -35,7 +35,7 @@
     }
     h1, h2 {
       margin-top: 30px;
-      color: #ffffff;
+      color: #2E8B57;
     }
     table {
       width: 100%;
@@ -43,18 +43,19 @@
       margin-top: 10px;
     }
     table, th, td {
-      border: 1px solid #555;
+      border: 1px solid #aaa;
     }
     th, td {
       padding: 10px;
       text-align: left;
     }
     th {
-      background: #4c4c4c;
-      color: #ffffff;
+      background: #f0f0f0;
+      color: #333;
     }
     td a {
-      color: #4da6ff; /* Blue links */
+      color: #2E8B57; /* Links match nav color */
+      font-weight: bold;
     }
     td a:hover {
       text-decoration: underline;
@@ -65,8 +66,17 @@
     footer {
       margin-top: 40px;
       font-size: 0.9em;
-      color: #aaa;
+      color: #555;
       text-align: center;
+    }
+    /* Contact links */
+    .contact a {
+      color: #2E8B57;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -125,8 +135,8 @@
   </ul>
 
   <h2>📫 Contact</h2>
-  <p>
-    Feel free to connect with me on <a href="https://www.linkedin.com/in/luke-snellback-54300b238/" target="_blank">LinkedIn</a> or reach out via email at
+  <p class="contact">
+    Connect with me on <a href="https://www.linkedin.com/in/luke-snellback-54300b238/" target="_blank">LinkedIn</a> or email me at
     <a href="mailto:snellbackl@gmail.com">snellbackl@gmail.com</a>.
   </p>
 </main>
