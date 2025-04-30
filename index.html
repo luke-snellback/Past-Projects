@@ -24,11 +24,25 @@
       text-align: center;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      padding: 10px;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
     nav {
       background-color: #2E8B57;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
       position: relative;
     }
     nav ul {
@@ -36,48 +50,42 @@
       padding: 0;
       margin: 0;
       display: flex;
-      gap: 20px;
+      flex-direction: column;
+      display: none;
+      background: #2E8B57;
     }
-    nav li {
-      position: relative;
+    nav ul.show {
+      display: flex;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: 600;
-      padding: 8px 12px;
+      padding: 12px 20px;
       display: block;
       transition: background 0.3s;
     }
     nav a:hover {
       background-color: #236c45;
-      border-radius: 4px;
     }
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #2E8B57;
-      padding: 10px 0;
-      min-width: 180px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      z-index: 10;
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+      nav ul {
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+      }
     }
-    nav ul li:hover ul {
-      display: block;
-    }
-    nav ul li ul li a {
-      padding: 10px 15px;
+    h1, h2 {
+      margin-top: 30px;
+      color: #2E8B57;
     }
     main {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-    }
-    h2 {
-      color: #2E8B57;
-      margin-top: 40px;
     }
     table {
       width: 100%;
@@ -97,10 +105,13 @@
     td a {
       color: #2E8B57;
       font-weight: 600;
-      text-decoration: none;
+      text-decoration: underline;
     }
     td a:hover {
-      text-decoration: underline;
+      text-decoration: none;
+    }
+    ul li {
+      margin-bottom: 8px;
     }
     footer {
       text-align: center;
@@ -112,10 +123,10 @@
     .contact a {
       color: #2E8B57;
       font-weight: 600;
-      text-decoration: none;
+      text-decoration: underline;
     }
     .contact a:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -127,17 +138,17 @@
 </header>
 
 <nav>
+  <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <ul>
     <li><a href="./">Home</a></li>
-    <li>
-      <a href="#">Projects</a>
-      <ul>
-        <li><a href="Feeling%20Guilty%20about%20Social%20Media%20Usage/">Social Media</a></li>
-        <li><a href="The%20Influence%20of%20Gender%20on%20Perceived%20Trustworthiness%20of%20Political%20Figures/">Politics</a></li>
-        <li><a href="Heart%20Disease%20Predictive%20Models/">Heart Disease</a></li>
-        <li><a href="The%20Effects%20of%20Socioeconomic%20Factors%20on%20Mental%20Health/">Mental Health</a></li>
-      </ul>
-    </li>
+    <li><a href="Feeling%20Guilty%20about%20Social%20Media%20Usage/">Social Media</a></li>
+    <li><a href="The%20Influence%20of%20Gender%20on%20Perceived%20Trustworthiness%20of%20Political%20Figures/">Politics</a></li>
+    <li><a href="Heart%20Disease%20Predictive%20Models/">Heart Disease</a></li>
+    <li><a href="The%20Effects%20of%20Socioeconomic%20Factors%20on%20Mental%20Health/">Mental Health</a></li>
     <li><a href="https://www.linkedin.com/in/luke-snellback-54300b238/" target="_blank">LinkedIn</a></li>
     <li><a href="mailto:snellbackl@gmail.com">Contact</a></li>
   </ul>
@@ -177,7 +188,7 @@
     <li>Statistical modeling (R, Python)</li>
     <li>Data visualization (Excel, Tableau, RStudio)</li>
     <li>Machine learning & predictive analytics</li>
-    <li>SQL, SPSS, scikit-learn, pandas, NumPy</li>
+    <li>SQL, SPSS, Excel, RStudio, Python, scikit-learn, pandas, NumPy</li>
   </ul>
 
   <h2>📫 Get in Touch</h2>
