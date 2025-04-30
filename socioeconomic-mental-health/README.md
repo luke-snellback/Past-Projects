@@ -15,3 +15,5 @@ To guide policy and healthcare strategies aimed at reducing mental health dispar
 - Predictive scoring across training and validation datasets
 - Data cleaning and feature selection
 
+
+The report can be found here: [Effects of Socioeconomic Factors on Mental Health](./The%20Effects%20of%20Socioeconomic%20Factors%20on%20Mental%20Health.pdf)
