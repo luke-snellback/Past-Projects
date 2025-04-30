@@ -16,3 +16,4 @@ To understand the intersection of gender identity and political alignment in sha
 - Index graphs
 - Subgroup analysis by gender and ideology
 
+The report can be found here: [Gender and Perceived Trustworthiness of Political Figures](./The%20Influence%20of%20Gender%20on%20Perceived%20Trustworthiness%20of%20Political%20Figures.pdf)
