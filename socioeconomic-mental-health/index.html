@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Socioeconomic Factors & Mental Health</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --header-bg: #004225;
+      --link-color: #1E90FF;
+      --body-bg: #D3D3D3;
+      --text-color: #333;
+      --hover-bg: #f0f0f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--body-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    header p {
+      margin-top: 5px;
+      font-size: 1em;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 28px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    nav {
+      background: white;
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+      flex-direction: column;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 15px 20px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--hover-bg);
+    }
+
+    .submenu {
+      display: none;
+      flex-direction: column;
+      background-color: #f9f9f9;
+      border-left: 4px solid var(--header-bg);
+    }
+
+    .submenu.show {
+      display: flex;
+    }
+
+    .has-submenu > a::after {
+      content: " ▼";
+      font-size: 0.8em;
+    }
+
+    @media (min-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: var(--header-bg);
+      font-size: 1.6em;
+      border-bottom: 2px solid var(--header-bg);
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #444;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🧠 Socioeconomic Factors & Mental Health</h1>
+  <p>Exploring financial and behavioral indicators of mental health challenges</p>
+  <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="../">Home</a></li>
+    <li class="has-submenu">
+      <a href="#" onclick="event.preventDefault(); this.parentElement.querySelector('.submenu').classList.toggle('show');">Projects</a>
+      <ul class="submenu">
+        <li><a href="../feeling-guilty-social-media/">Social Media</a></li>
+        <li><a href="../gender-trust-political-figures/">Politics</a></li>
+        <li><a href="../heart-disease-predictive-models/">Heart Disease</a></li>
+        <li><a href="../socioeconomic-mental-health/">Mental Health</a></li>
+      </ul>
+    </li>
+    <li><a href="https://www.linkedin.com/in/luke-snellback-54300b238/" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:snellbackl@gmail.com">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <p>
+    This report examines how socioeconomic variables impact mental health across diverse populations.
+    The analysis uses regression modeling on data from three datasets to uncover key financial and behavioral indicators of mental health challenges.
+  </p>
+
+  <h2>Key Highlights</h2>
+  <ul>
+    <li>Top predictors include household income, education, and behaviors like donating to causes.</li>
+    <li>A regression model using 15 key variables showed strong predictive accuracy across training and test sets.</li>
+    <li>The model identifies at-risk individuals based on socioeconomic and behavioral patterns.</li>
+  </ul>
+
+  <h2>Purpose</h2>
+  <p>
+    To guide policy and healthcare strategies aimed at reducing mental health disparities linked to socioeconomic inequality.
+  </p>
+
+  <h2>Tools & Methods</h2>
+  <ul>
+    <li>Multiple regression analysis</li>
+    <li>Predictive scoring across training and validation datasets</li>
+    <li>Data cleaning and feature selection</li>
+  </ul>
+
+  <h2>📄 Full Report</h2>
+  <p>
+    The full report can be found here:
+    <a href="./The%20Effects%20of%20Socioeconomic%20Factors%20on%20Mental%20Health.pdf" target="_blank">
+      Effects of Socioeconomic Factors on Mental Health (PDF)
+    </a>
+  </p>
+</main>
+
+<footer>
+  <p>© 2025 Luke Snellback</p>
+</footer>
+
+</body>
+</html>
