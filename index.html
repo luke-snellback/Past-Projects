@@ -1,73 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Luke Snellback – Analytics Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --header-bg: #004225;
+      --link-color: #87CEFA;
+      --body-bg: #D3D3D3;
+      --text-color: #333;
+      --hover-bg: #00361e;
+    }
+
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #D3D3D3;
-      color: #333;
+      background-color: var(--body-bg);
+      color: var(--text-color);
       line-height: 1.6;
     }
+
     header {
-      background-color: #2E8B57;
+      background-color: var(--header-bg);
       color: white;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+
     .menu-toggle {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       cursor: pointer;
       padding: 15px;
       position: absolute;
-      top: 15px;
-      right: 20px;
+      top: 20px;
+      right: 25px;
       z-index: 999;
     }
+
     .menu-toggle span {
-      height: 4px;
-      width: 30px;
+      height: 3px;
+      width: 28px;
       background: white;
       margin: 4px 0;
       border-radius: 2px;
     }
+
     nav {
-      background-color: #2E8B57;
+      background-color: var(--header-bg);
       position: relative;
     }
+
     nav ul {
       list-style: none;
-      padding: 0;
       margin: 0;
-      background: #2E8B57;
-      flex-direction: column;
+      padding: 0;
       display: none;
+      flex-direction: column;
     }
+
     nav ul.show {
       display: flex;
     }
+
     nav a {
-      color: white;
+      color: var(--link-color);
       text-decoration: none;
       font-weight: 600;
       padding: 15px 20px;
       display: block;
       transition: background 0.3s;
     }
+
     nav a:hover {
-      background-color: #236c45;
+      background-color: var(--hover-bg);
     }
+
     @media (min-width: 768px) {
       .menu-toggle {
         display: none;
@@ -78,53 +104,66 @@
         justify-content: center;
       }
     }
-    h1, h2 {
-      margin-top: 30px;
-      color: #2E8B57;
-    }
+
     main {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 950px;
+      margin: 50px auto;
       padding: 0 20px;
     }
+
+    h2 {
+      margin-top: 40px;
+      color: var(--header-bg);
+      font-size: 1.8em;
+      border-bottom: 2px solid var(--header-bg);
+      padding-bottom: 5px;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    table, th, td {
-      border: 1px solid #aaa;
-    }
+
     th, td {
-      padding: 12px;
+      border: 1px solid #aaa;
+      padding: 14px;
       text-align: left;
     }
+
     th {
-      background: #f0f0f0;
+      background-color: #f9f9f9;
     }
+
     td a {
-      color: #2E8B57;
+      color: var(--link-color);
       font-weight: 600;
       text-decoration: underline;
     }
+
     td a:hover {
       text-decoration: none;
     }
+
     ul li {
       margin-bottom: 8px;
     }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      color: #555;
+      color: #444;
       margin-top: 60px;
     }
+
     .contact a {
-      color: #2E8B57;
+      color: var(--link-color);
       font-weight: 600;
       text-decoration: underline;
     }
+
     .contact a:hover {
       text-decoration: none;
     }
@@ -157,7 +196,7 @@
 <main>
   <h2>Past Analytics Reports 📚</h2>
   <p>
-    This portfolio highlights my applied analytical work from the University of Oregon. Each project is rooted in real-world data and showcases my skills in statistical analysis, modeling, and business insight.
+    This portfolio showcases real-world, data-driven analytics projects completed during my time at the University of Oregon. These reports highlight my abilities in analysis, visualization, modeling, and decision-making under uncertainty.
   </p>
 
   <table>
@@ -193,7 +232,8 @@
 
   <h2>📫 Get in Touch</h2>
   <p class="contact">
-    <a href="mailto:snellbackl@gmail.com">snellbackl@gmail.com</a> • <a href="https://www.linkedin.com/in/luke-snellback-54300b238/" target="_blank">LinkedIn</a>
+    <a href="mailto:snellbackl@gmail.com">snellbackl@gmail.com</a> • 
+    <a href="https://www.linkedin.com/in/luke-snellback-54300b238/" target="_blank">LinkedIn</a>
   </p>
 </main>
 
